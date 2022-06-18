@@ -21,6 +21,10 @@ mongoose.connection.on("connected", ()=>{
     console.log("mongoDB connected!");
 });
 
+app.get("/users", (req,res) => {
+    res.send("hello world");
+});
+
 app.listen(8000, ()=>{
     connect();
     console.log("connected to backend.");
